@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 jobs:
-- job: echo "job"
+- job: "job"
   displayName: echo "first job"
 
   steps:
