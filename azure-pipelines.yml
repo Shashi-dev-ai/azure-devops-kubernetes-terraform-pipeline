@@ -15,10 +15,10 @@ stages:
       - job: "builds"
         displayName: "build job"
         steps:
-          - script: echo "First step"
-            displayName: "First step desc......"
+          - script: echo " step"
+            displayName: " step desc......"
 
           - script: |
-              echo "Second step"
-              echo "Second step"
-            displayName: "Second step desc......"
+              echo " steps"
+              echo " steps"
+            displayName: "steps desc......"
