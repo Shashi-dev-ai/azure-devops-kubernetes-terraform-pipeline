@@ -16,16 +16,11 @@ stages:
   jobs:
   - job: Build
     displayName: Build
-    steps:
-      - script: echo Building the project...
-        displayName: 'Build Step'
-      - script: echo Build completed successfully!
-        displayName: 'Post Build Step'
 
-      - task: CmdLine@2
-        inputs:
-          script: |
-            echo $(Test)
-            echo Hello world
+    #Stages > Jobs > steps(task)
+
+    steps:
+      - step: First step
+      - step: second step
 
 
