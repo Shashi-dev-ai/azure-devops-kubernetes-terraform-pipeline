@@ -8,11 +8,10 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-# stages > jobs > steps(task)
 
 steps:
-- script: First step
+- script: echo "First step"
   displayName: First step desc...
 
-- script: second step
-  displayName: second step desc...
+- script: echo "Second step"
+  displayName: Second step desc...
