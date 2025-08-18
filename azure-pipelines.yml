@@ -12,11 +12,12 @@ pool:
 jobs:
 - job: echo "job1"
   displayName: echo "first job"
-steps:
-- script: echo "First step"
-  displayName: First step desc...
 
-- script: |
-     echo "Second step"
-     echo "2 step"
-  displayName: Second step desc...
+  steps:
+  - script: echo "First step"
+    displayName: First step desc...
+
+  - script: |
+      echo "Second step"
+      echo "2 step"
+    displayName: Second step desc...
