@@ -13,5 +13,7 @@ steps:
 - script: echo "First step"
   displayName: First step desc...
 
-- script: echo "Second step"
+- script: |
+     echo "Second step"
+     echo "2 step"
   displayName: Second step desc...
