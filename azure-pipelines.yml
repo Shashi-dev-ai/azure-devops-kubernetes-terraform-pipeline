@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+stages:
+  - stage: echo "Stage one"
+
 jobs:
 - job: "build"
   displayName: "first job"
