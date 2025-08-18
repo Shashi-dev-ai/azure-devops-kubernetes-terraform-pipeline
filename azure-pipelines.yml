@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 jobs:
-- job: "build1"
+- job: "build"
   displayName: "first job"
 
   steps:
