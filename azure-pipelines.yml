@@ -14,7 +14,7 @@ stages:
 
     jobs:
       - job: "builds"
-        displayName: "first job"
+        displayName: "first-job"
 
         steps:
           - script: echo "First step"
@@ -26,7 +26,7 @@ stages:
             displayName: Second step desc......
 
       - job: "deploys"
-        displayName: "second job"
+        displayName: "second-job"
         steps:
           - script: echo "second step"
             displayName: First step desc...
