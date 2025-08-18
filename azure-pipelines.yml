@@ -12,7 +12,7 @@ pool:
 
 steps:
 - step: First step
-  description: First step desc
+  displayName: First step desc
 
 - step: second step
-  description: second step desc...
+  displayName: second step desc...
