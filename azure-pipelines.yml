@@ -24,14 +24,3 @@ stages:
               echo "Second step"
               echo "Second step"
             displayName: Second step desc......
-
-      - job: "deploys"
-        displayName: "second-job"
-        steps:
-          - script: echo "second step"
-            displayName: First step desc...
-
-          - script: |
-              echo "Second step"
-              echo "Second step"
-            displayName: Second step desc...
