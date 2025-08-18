@@ -18,12 +18,12 @@ stages:
 
         steps:
         - script: echo "First step"
-          displayName: First step desc...
+          displayName: First step desc......
 
         - script: |
             echo "Second step"
             echo "Second step"
-          displayName: Second step desc...
+          displayName: Second step desc......
 
       - job: "deploy"
         
