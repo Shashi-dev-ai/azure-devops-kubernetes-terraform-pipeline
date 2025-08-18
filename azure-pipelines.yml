@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+jobs:
+- job: echo "job1"
+  displayName: echo "first job"
 steps:
 - script: echo "First step"
   displayName: First step desc...
