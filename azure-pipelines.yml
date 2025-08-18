@@ -28,7 +28,7 @@ stages:
       - job: "deploys"
         
         displayName: "second job"
-        dependsOn: "builds"
+        
 
         steps:
         - script: echo "second step"
