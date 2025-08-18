@@ -10,31 +10,31 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-  - stage: echo "Stage one"
+  - stage:  "Stage one"
 
-jobs:
-- job: "build"
-  displayName: "first job"
+    jobs:
+      - job: "build"
+        displayName: "first job"
 
-  steps:
-  - script: echo "First step"
-    displayName: First step desc...
+        steps:
+        - script: echo "First step"
+          displayName: First step desc...
 
-  - script: |
-      echo "Second step"
-      echo "Second step"
-    displayName: Second step desc...
+        - script: |
+            echo "Second step"
+            echo "Second step"
+          displayName: Second step desc...
 
-- job: "deploy"
-   
-  displayName: "second job"
-  dependsOn: "build"
+      - job: "deploy"
+        
+        displayName: "second job"
+        dependsOn: "build"
 
-  steps:
-  - script: echo "second step"
-    displayName: First step desc...
+        steps:
+        - script: echo "second step"
+          displayName: First step desc...
 
-  - script: |
-      echo "Second step"
-      echo "Second step"
-    displayName: Second step desc...
+        - script: |
+            echo "Second step"
+            echo "Second step"
+          displayName: Second step desc...
