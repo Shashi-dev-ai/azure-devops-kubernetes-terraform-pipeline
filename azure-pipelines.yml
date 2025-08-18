@@ -23,7 +23,9 @@ jobs:
     displayName: Second step desc...
 
 - job: "deploy"
+   
   displayName: "second job"
+  dependsOn: "build"
 
   steps:
   - script: echo "second step"
