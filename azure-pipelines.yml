@@ -13,7 +13,7 @@ stages:
   - stage:  "Build Stage"
 
     jobs:
-      - job: "build"
+      - job: "builds"
         displayName: "first job"
 
         steps:
@@ -25,10 +25,10 @@ stages:
             echo "Second step"
           displayName: Second step desc......
 
-      - job: "deploy"
+      - job: "deploys"
         
         displayName: "second job"
-        dependsOn: "build"
+        dependsOn: "builds"
 
         steps:
         - script: echo "second step"
