@@ -26,15 +26,6 @@ stages:
         inputs:
           script: |
             echo $(Test)
-            
             echo Hello world
 
-      - task: Docker@2
-        displayName: Build an image
-        inputs:
-          containerRegistry: 'Docker'
-          repository: 'First Docket Image'
-          command: 'buildAndPush'
-          Dockerfile: '**/Dockerfile'
-          tags: '$(Build.BuildId)'
 
