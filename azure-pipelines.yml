@@ -11,8 +11,8 @@ pool:
 # stages > jobs > steps(task)
 
 steps:
-- step: First step
-  displayName: First step desc
+- task: First step
+  displayName: First step desc...
 
-- step: second step
+- task: second step
   displayName: second step desc...
