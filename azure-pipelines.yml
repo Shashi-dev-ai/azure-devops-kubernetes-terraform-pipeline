@@ -7,11 +7,11 @@ pool:
 stages:
  - stage: Build
    displayName: "Build Stage"
-  jobs:
+   jobs:
     - job: Buildjob
-     steps:
+      steps:
        - script: echo "Build script"
          displayName: "script build"
-        - script: |
+       - script: |
           echo "aaaaa"
           echo "bbbb"
