@@ -27,7 +27,7 @@ stages:
     displayName: "QA Deployment" 
     jobs:
       - deployment: "QADeployment"
-        environment: "QA"
+        environment: QA
         displayName: "QA deployment"
         strategy:
            runOnce:
