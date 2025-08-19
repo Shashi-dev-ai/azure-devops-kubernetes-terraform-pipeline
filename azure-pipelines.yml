@@ -22,3 +22,8 @@ stages:
             SourceFolder: '$(System.DefaultWorkingDirectory)'
             Contents: '**/*.*'
             TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+     - script: |
+          echo "Listing files in $(Build.ArtifactStagingDirectory)"
+          ls -R $(Build.ArtifactStagingDirectory)
+       displayName: "List files in Artifact Staging Directory"
