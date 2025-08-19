@@ -16,4 +16,5 @@ stages:
      steps:
      - bash: echo $(System.DefaultWorkingDirectory)
      - bash: echo "Shashi"
+     - bash: echo $(Build.ArtifactStagingDirectory)
    
