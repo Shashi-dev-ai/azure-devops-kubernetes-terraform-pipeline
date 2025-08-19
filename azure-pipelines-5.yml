@@ -22,7 +22,7 @@ stages:
          runOnce:
            deploy:
              steps:
-               - script: echo "Deployment steps"
+               - script: echo "Dev Deployment steps"
   - stage: "QADeployment"
     displayName: "QA Deployment" 
     jobs:
