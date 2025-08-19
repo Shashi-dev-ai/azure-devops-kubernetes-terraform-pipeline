@@ -10,9 +10,17 @@ stages:
  - stage: "Builds"
    displayName: "Build env"
    jobs:
+   
    - job: 
      displayName: "Job1"
      steps:
      - bash: echo "step1"
        displayName: "step1"
      - script: echo "echo data"
+   
+   - job: "job2"
+     displayName: "Job2"
+     steps:
+       - script: echo "This is job 2 of build stage"
+       - script: echo "Thank you"
+       - bash: echo "bash statement"
