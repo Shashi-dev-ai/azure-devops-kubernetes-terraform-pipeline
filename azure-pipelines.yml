@@ -65,6 +65,9 @@ stages:
      
  - stage: "Prodenv"
    displayName: "Prodenv"
+   dependsOn: 
+    - Devenv
+    - QAenv
    jobs:
    - job: "Prodenvjob1"
      displayName: "Job1 of satge 2"
