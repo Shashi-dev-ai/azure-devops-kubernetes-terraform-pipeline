@@ -17,7 +17,7 @@ stages:
      - bash: echo "step1"
        displayName: "step1"
      - script: echo "echo data"
-     - script: echo $(Build.DefaultWorkingDirectory)
+     - script: echo $(System.DefaultWorkingDirectory)
    
    - job: "job2"
      displayName: "Job2"
