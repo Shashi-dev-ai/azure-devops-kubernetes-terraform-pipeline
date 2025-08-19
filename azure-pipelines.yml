@@ -10,10 +10,10 @@ stages:
  - stage: "Builds"
    displayName: "Build env"
    jobs:
-   
-   - job: 
-     displayName: "Job1"
+   - job: "JOB1"
      steps:
-     - bash: echo $(System.DefaultWorkingDirectory)
-     - bash: echo $(Build.SourceDirectory)
+       - bash: $(System.DefaultWorkingDirectory)
+       - bash: $(Build.SourceDirectory)  
+
+
    
