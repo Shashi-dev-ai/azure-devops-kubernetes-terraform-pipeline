@@ -4,21 +4,16 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-stages:
- - stage: Build
-   displayName: "Build Stage"
-   jobs:
-    - job: Buildjob
-      steps:
-       - script: echo "Build script"
-         displayName: "script build"
-       - script: |
-          echo "aaaaa"
-          echo "bbbb"
-    - job: Dev Env
-      steps:
-       - script: 
-          echo "Dev script"
-         displayName: "Dev script"
+#stages > jobs > steps:
 
-          
+stages:
+ - stage: "Builds"
+   displayName: "Build env"
+   jobs:
+   
+   - job: 
+     displayName: "Job1"
+     steps:
+     - bash: echo $(System.DefaultWorkingDirectory)
+     - bash: echo "Shashi"
+   
