@@ -16,8 +16,8 @@ stages:
           echo "aaaaa"
           echo "bbbb"
     - job: Dev Env
-      displayName: "Dev env"
       steps:
        - script: echo "Dev script"
+         displayName: "Dev script"
 
           
