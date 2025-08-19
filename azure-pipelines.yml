@@ -43,5 +43,22 @@ stages:
            echo "List2"
            echo "list3"
      
+ - stage: "QAenv"
+   displayName: "QAenv"
+   jobs:
+   - job: "QAenvjob1"
+     displayName: "Job1 of satge 2"
+     steps:
+       - script: echo "job1"
+       - script: echo "job2"
+       - bash: echo "Job3"
 
+   - job: "QAjob2"
+     displayName: "JOb4Dev"
+     steps:
+       - script: |
+           echo "List1"
+           echo "List2"
+           echo "list3"
+     
 
