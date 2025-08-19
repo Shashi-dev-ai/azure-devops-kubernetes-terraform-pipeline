@@ -4,19 +4,15 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-stages:
- - stage: Build
-   displayName: "Build Stage"
-   jobs:
-    - job: Buildjob
-      steps:
-       - script: echo "Build script"
-         displayName: "script build"
-       - script: |
-          echo "aaaaa"
-          echo "bbbb"
-    - job: "DevEnv"
-      steps:
-       - script: 
-          echo "Dev script"
+#stages > jobs > steps:
 
+stages:
+ - stage: "Builds"
+   displayName: "Build env"
+   jobs:
+   - job: 
+     displayName: "Job1"
+     steps:
+     - bash: echo "step1"
+       displayName: "step1"
+     - script: echo "echo data"
