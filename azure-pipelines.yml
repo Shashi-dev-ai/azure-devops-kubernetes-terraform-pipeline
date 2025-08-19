@@ -15,4 +15,5 @@ stages:
      displayName: "Job1"
      steps:
      - bash: echo $(System.DefaultWorkingDirectory)
+     - bash: echo $(Build.SourceDirectory)
    
