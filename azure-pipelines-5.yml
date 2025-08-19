@@ -6,13 +6,15 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-  - stage: "DevEnv"
+  - stage: "Build"
     jobs:
       - job: "Build"
         displayName: "Job to deploy"
         steps:
           - script: echo "build script"
-
+  - stage: "DevDeployment"
+    displayName: "Dev Deployment"
+    jobs:
       - deployment: "DevDeployment"
         environment: DEV
         displayName: "Dev Deployment Details"
@@ -21,7 +23,9 @@ stages:
            deploy:
              steps:
                - script: echo "Deployment steps"
-
+  - stage: "QADeployment"
+    displayName: "QA Deployment" 
+    jobs:
       - deployment: "QADeployment"
         environment: "QA"
         displayName: "QA deployment"
