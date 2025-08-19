@@ -7,30 +7,73 @@ pool:
 
 stages:
   - stage: "Build"
+    displayName: "Building application"
     jobs:
-      - job: "Build"
-        displayName: "Job to deploy"
+      - job: "Job1"
+        displayName: "Job to build app"
         steps:
-          - script: echo "build script"
-  - stage: "DevDeployment"
-    displayName: "Dev Deployment"
+          - script: echo "buld application"
+
+  - stage: "Dev"
+    displayName: "yaml to build dev application"
     jobs:
-      - deployment: "DevDeployment"
-        environment: DEV
-        displayName: "Dev Deployment Details"
+    - deployment: "deploymentTODev"
+      environment: Dev
+      strategy:
+       runOnce:
+          deploy:
+             steps:
+               - script: echo "code deployed to Dev"
+    
+        
+  - stage: "QA"
+    displayName: "QA deployment"
+    jobs:
+      - deployment: "deploymentToQA"
+        environment: "QA"
         strategy:
          runOnce:
-           deploy:
-             steps:
-               - script: echo "Dev Deployment steps"
-  - stage: "QADeployment"
-    displayName: "QA Deployment" 
+            deploy:
+               steps:
+                 - script: echo "Deployed to QA"
+ 
+  - stage: "Prod"
+    displayName: "DeployedTOProd"
     jobs:
-      - deployment: "QADeployment"
-        environment: QA
-        displayName: "QA deployment"
+      - deployment: "deplyToprod"
+        environment: "Prod"
         strategy:
-           runOnce:
-              deploy:
-                steps:
-                  - script: echo "QA deployment"
+         runOnce:
+            deploy:
+               steps:
+                 - script: echo "deploy to Prod"
+
+# stages:
+#   - stage: "Build"
+#     jobs:
+#       - job: "Build"
+#         displayName: "Job to deploy"
+#         steps:
+#           - script: echo "build script"
+#   - stage: "DevDeployment"
+#     displayName: "Dev Deployment"
+#     jobs:
+#       - deployment: "DevDeployment"
+#         environment: DEV
+#         displayName: "Dev Deployment Details"
+#         strategy:
+#          runOnce:
+#            deploy:
+#              steps:
+#                - script: echo "Dev Deployment steps"
+#   - stage: "QADeployment"
+#     displayName: "QA Deployment" 
+#     jobs:
+#       - deployment: "QADeployment"
+#         environment: QA
+#         displayName: "QA deployment"
+#         strategy:
+#            runOnce:
+#               deploy:
+#                 steps:
+#                   - script: echo "QA deployment"
