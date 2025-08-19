@@ -48,32 +48,4 @@ stages:
                steps:
                  - script: echo "deploy to Prod"
 
-# stages:
-#   - stage: "Build"
-#     jobs:
-#       - job: "Build"
-#         displayName: "Job to deploy"
-#         steps:
-#           - script: echo "build script"
-#   - stage: "DevDeployment"
-#     displayName: "Dev Deployment"
-#     jobs:
-#       - deployment: "DevDeployment"
-#         environment: DEV
-#         displayName: "Dev Deployment Details"
-#         strategy:
-#          runOnce:
-#            deploy:
-#              steps:
-#                - script: echo "Dev Deployment steps"
-#   - stage: "QADeployment"
-#     displayName: "QA Deployment" 
-#     jobs:
-#       - deployment: "QADeployment"
-#         environment: QA
-#         displayName: "QA deployment"
-#         strategy:
-#            runOnce:
-#               deploy:
-#                 steps:
-#                   - script: echo "QA deployment"
+
