@@ -24,7 +24,7 @@ stages:
           deploy:
              steps:
                - script: echo "code deployed to Dev"
-    
+   
         
   - stage: "QA"
     displayName: "QA deployment"
