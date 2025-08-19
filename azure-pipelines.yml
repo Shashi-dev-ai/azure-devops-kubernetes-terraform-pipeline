@@ -61,4 +61,21 @@ stages:
            echo "List2"
            echo "list3"
      
+ - stage: "Prodenv"
+   displayName: "Prodenv"
+   jobs:
+   - job: "Prodenvjob1"
+     displayName: "Job1 of satge 2"
+     steps:
+       - script: echo "job1"
+       - script: echo "job2"
+       - bash: echo "Job3"
 
+   - job: "Prodjob2"
+     displayName: "JOb4Dev"
+     steps:
+       - script: |
+           echo "List1"
+           echo "List2"
+           echo "list3"
+     
