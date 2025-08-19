@@ -27,6 +27,7 @@ stages:
 
  - stage: "Devenv"
    displayName: "Devenv"
+   dependsOn: "Builds"
    jobs:
    - job: "Devenvjob1"
      displayName: "Job1 of satge 2"
@@ -45,6 +46,7 @@ stages:
      
  - stage: "QAenv"
    displayName: "QAenv"
+   dependsOn: "Builds"
    jobs:
    - job: "QAenvjob1"
      displayName: "Job1 of satge 2"
