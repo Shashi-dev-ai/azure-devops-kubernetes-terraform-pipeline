@@ -9,7 +9,6 @@ stages:
   displayName: "Build Stage"
   jobs:
     -job: Buildjob
-     displayName: "BuildJob"
      steps:
        -script: echo "Build script"
         displayName: "script build"
