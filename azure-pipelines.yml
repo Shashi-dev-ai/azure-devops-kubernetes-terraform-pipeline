@@ -18,6 +18,6 @@ stages:
     - job: "Dev Job"
       displayName: "Dev env"
       steps:
-        - script: echo "Dev Script"
+       - script: echo "Dev Script"
 
           
