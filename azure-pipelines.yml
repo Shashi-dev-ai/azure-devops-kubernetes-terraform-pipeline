@@ -5,16 +5,14 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-  - stage: BuildStage
-    displayName: "Build Stage"
-    jobs:
-      - job: BuildJob
-        displayName: "Build Job"
-        steps:
-          - script: echo "Running step 1"
-            displayName: "Step 1: Echo message"
-
-          - script: |
-              echo "Running step 2 - part 1"
-              echo "Running step 2 - part 2"
-            displayName: "Step 2: Multiple echo commands"
+ -stage: Build
+  displayName: "Build Stage"
+  jobs:
+    -job: Buildjob
+     displayName: "BuildJob"
+     steps:
+       -script: echo "Build script"
+        displayName: "script build"
+        -script: |
+          echo "aaaaa"
+          echo "bbbb"
